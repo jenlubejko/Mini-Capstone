@@ -1,0 +1,12 @@
+<h1>Product Info</h1>
+<h2>Name: <% @product.name %></h2>
+<h4>Price: <%= @product.price %></h4>
+<img src="<%= @product.image %>" style="width:304px;height:228px;">
+<h4><%= @product.description %></h4>
+<a href="/products">Back to all products</a>
+<div>
+  <a href="/products/<%= @product.id %>">Destroy this product (this won't work)</a>
+</div>
+<div>
+  <%= link_to "Destroy this product (this works!)", "/products/#{@product.id}", method: :delete %>
+</div>
